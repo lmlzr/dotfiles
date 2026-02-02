@@ -115,13 +115,18 @@
       "type": "uptime",
       "key": "",
       "keyColor": "#660B2A"
-    },
+    },    
     {
       "type": "datetime",
       "key": "",
       "keyColor": "#660B2A"
-    },    
-    // TODO system age based on https://www.reddit.com/r/fastfetch/comments/1loyaks/first_ricing/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+    },
+    {
+    "type": "command",
+    "key": "",
+    "keyColor": "#660B2A",
+    "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
+    },
     "break",
     {
       "type": "colors",

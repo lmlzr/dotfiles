@@ -4,7 +4,7 @@
     "type": "file",
     "source": "~/.config/fastfetch/logo.txt",
     "color": {
-        "1": "38;2;187;11;65",
+        "1": "#bb0b41",
       //  "2": "#ec3e5f4",
       //  "3": "#ec3e5f4",
       //  "4": "#ec3e5f4",
@@ -30,31 +30,31 @@
       "keyIcon": "",
       "fqdn": false,
       "color": {
-        "user": "38;2;102;11;42",
+        "user": "#660B2A",
         "at": "",
-        "host": "38;2;187;11;64"
+        "host": "#bb0b41"
       }
     },
     "break",
     {
       "type": "custom",
-      "format": "{#38;2;187;11;64}Software Information"
+      "format": "{##bb0b41}Software Information"
 
     },
     {
       "type": "os",
       "key": "",
-      "keyColor": "38;2;102;11;42"
+      "keyColor": "#660B2A"
     },
     {
       "type": "kernel",
       "key": "",
-      "keyColor": "38;2;102;11;42"
+      "keyColor": "#660B2A"
     },
     {
       "type": "packages",
       "key": "󰏖",
-      "keyColor": "38;2;102;11;42",
+      "keyColor": "#660B2A",
       "disabled": [
         "winget"
       ],
@@ -63,22 +63,22 @@
         {
       "type": "shell",
       "key": "",
-      "keyColor": "38;2;102;11;42"
+      "keyColor": "#660B2A"
     },
             {
       "type": "terminal",
       "key": "󰄛",
-      "keyColor": "38;2;102;11;42"
+      "keyColor": "#660B2A"
     },
     "break",
     {
       "type": "custom",
-      "format": "{#38;2;187;11;64}Hardware Information"
+      "format": "{##bb0b41}Hardware Information"
     },
     {
       "type": "cpu",
       "key": "",
-      "keyColor": "38;2;102;11;42"
+      "keyColor": "#660B2A"
     },
     {
       "type": "gpu",
@@ -87,57 +87,41 @@
       "detectionMethod": "pci",
       "temp": false,
       "hideType": "none",
-      "keyColor": "38;2;102;11;42"
+      "keyColor": "#660B2A"
     },
     {
       "type": "board",
       "key": "󰚗",
-      "keyColor": "38;2;102;11;42"
+      "keyColor": "#660B2A"
     },
     {
       "type": "memory",
       "key": "",
-      "keyColor": "38;2;102;11;42",
+      "keyColor": "#660B2A",
       "format": "{used} / {total} ({percentage})"
     },
     {
       "type": "processes",
       "key": " ",
       "keyIcon": "",
-      "keyColor": "38;2;102;11;42"
+      "keyColor": "#660B2A"
     },
     "break",
     {
       "type": "custom",
-      "format": "{#38;2;187;11;64}Time Information"
+      "format": "{##bb0b41}Time Information"
     },    
     {
       "type": "uptime",
       "key": "",
-<<<<<<< HEAD
       "keyColor": "#660B2A"
-    },    
+    },
     {
       "type": "datetime",
       "key": "",
       "keyColor": "#660B2A"
-    },
-    {
-    "type": "command",
-    "key": "",
-    "keyColor": "#660B2A",
-    "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
-    },
-=======
-      "keyColor": "38;2;102;11;42"
-    },
-    {
-      "type": "datetime",
-      "key": "",
-      "keyColor": "38;2;102;11;42"
     },    
     // TODO system age based on https://www.reddit.com/r/fastfetch/comments/1loyaks/first_ricing/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
->>>>>>> 27d1f32 (edits)
     "break",
     {
       "type": "colors",

@@ -4,7 +4,7 @@
     "type": "file",
     "source": "~/.config/fastfetch/logo.txt",
     "color": {
-        "1": "38;2;187;11;65",
+        "1": "38;2;187;11;65"
       //  "2": "#ec3e5f4",
       //  "3": "#ec3e5f4",
       //  "4": "#ec3e5f4",

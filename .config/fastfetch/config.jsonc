@@ -114,30 +114,19 @@
     {
       "type": "uptime",
       "key": "",
-<<<<<<< HEAD
-      "keyColor": "#660B2A"
+      "keyColor": "38;2;102;11;42"
     },    
     {
       "type": "datetime",
       "key": "",
-      "keyColor": "#660B2A"
+      "keyColor": "38;2;102;11;42"
     },
     {
     "type": "command",
     "key": "",
-    "keyColor": "#660B2A",
+    "keyColor": "38;2;102;11;42",
     "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
     },
-=======
-      "keyColor": "38;2;102;11;42"
-    },
-    {
-      "type": "datetime",
-      "key": "",
-      "keyColor": "38;2;102;11;42"
-    },    
-    // TODO system age based on https://www.reddit.com/r/fastfetch/comments/1loyaks/first_ricing/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
->>>>>>> 27d1f32 (edits)
     "break",
     {
       "type": "colors",

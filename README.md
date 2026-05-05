@@ -1,8 +1,11 @@
-# 
-ln -s ~/dotfiles/.config/yazi ~/.config/yazi
-ln -s ~/dotfiles/.config/fastfetch ~/.config/fastfetch
-ln -s ~/dotfiles/.config/kitty ~/.config/kitty
-ln -s ~/dotfiles/.config/icons/ ~/.local/share/icons
+# use the files
+stow foldername
+example:
+stow kitty
+
+
+# Kitty
+kitten themes
 
 
 # sources
@@ -12,3 +15,5 @@ https://github.com/nonetrix/tokyonight-kde
 https://addons.mozilla.org/en-US/firefox/addon/tokyo-night-milav/
 https://github.com/tokyo-night/tokyo-night-vscode-theme
 https://images.wallpapersden.com/image/download/tokyo-night_am5pbGyUmZqaraWkpJRramZnrWloaWY.jpg
+
+

@@ -3,6 +3,8 @@ stow foldername
 example:
 stow kitty
 
+for everything do:
+stow ./
 
 # Kitty
 kitten themes

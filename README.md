@@ -4,7 +4,13 @@ example:
 stow kitty
 
 for everything do:
-stow ./
+first check:
+stow -n -v */
+do it:
+stow */
+to replace old links
+stow -R */
+
 
 # Kitty
 kitten themes

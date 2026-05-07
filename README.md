@@ -1,4 +1,4 @@
-# use the files
+# Stow
 stow foldername
 example:
 stow kitty
@@ -15,12 +15,9 @@ stow -R */
 # Kitty
 kitten themes
 
-# ulauncher 
-fix
-https://github.com/Ulauncher/Ulauncher/wiki/Hotkey-In-Wayland
-
-
 # sources
+## ulauncher Hotkey fix
+https://github.com/Ulauncher/Ulauncher/wiki/Hotkey-In-Wayland
 ## Themes
 ### tokyo night
 https://wixdaq.github.io/Tokyo-Night-Website/ports.html

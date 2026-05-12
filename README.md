@@ -43,5 +43,5 @@ is shit replace
 https://github.com/SirHades696/TokyoNight-Ulauncher-Theme
 
 
-
+# inspirations (i stole some configs): 
 https://github.com/kzndotsh/dotfiles/tree/main

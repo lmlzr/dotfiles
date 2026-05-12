@@ -41,3 +41,7 @@ https://images.wallpapersden.com/image/download/tokyo-night_am5pbGyUmZqaraWkpJRr
 ### ulauncher theme
 is shit replace
 https://github.com/SirHades696/TokyoNight-Ulauncher-Theme
+
+
+
+https://github.com/kzndotsh/dotfiles/tree/main

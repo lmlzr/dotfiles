@@ -217,7 +217,7 @@ include /etc/sway/config.d/*
 # Waybar:
 
 exec_always pkill waybar
-exec_always waybar
+exec_always bash -c "sleep 1 && waybar"
 exec_always swaybg -i ~/dotfiles/wallpaper/wallpaper.png -m fill
 
 # Custom Shortcuts:
@@ -226,3 +226,6 @@ bindsym $mod+t exec kitty
 bindsym $mod+f exec firefox
 
 
+input * {
+    xkb_layout de
+}

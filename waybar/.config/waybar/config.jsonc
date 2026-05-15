@@ -7,13 +7,13 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "niri/workspaces",
-        "niri/mode",
-        "niri/scratchpad",
+        "sway/workspaces",
+        "sway/mode",
+        "sway/scratchpad",
         "custom/media"
     ],
     "modules-center": [
-        "niri/window"
+        "sway/window"
     ],
     "modules-right": [
         "mpd",
@@ -25,7 +25,7 @@
         "temperature",
         "backlight",
         "keyboard-state",
-        "niri/language",
+        "sway/language",
         "battery",
         "battery#bat2",
         "clock",
@@ -33,7 +33,7 @@
         "custom/power"
     ],
     // Modules configuration
-    // "niri/workspaces": {
+    // "sway/workspaces": {
     //     "disable-scroll": true,
     //     "all-outputs": true,
     //     "warp-on-scroll": false,
@@ -58,10 +58,10 @@
             "unlocked": ""
         }
     },
-    "niri/mode": {
+    "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
-    "niri/scratchpad": {
+    "sway/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
         "format-icons": ["", ""],

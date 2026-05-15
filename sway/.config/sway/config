@@ -152,7 +152,7 @@ include /etc/sway/config-vars.d/*
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
-    bindsym $mod+f fullscreen
+    bindsym $mod1+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle
@@ -222,5 +222,7 @@ exec_always swaybg -i ~/dotfiles/wallpaper/wallpaper.png -m fill
 
 # Custom Shortcuts:
 bindsym Mod1+space exec fuzzel
+bindsym Mod+t exec kitty
+bindsym Mod+f exec firefox
 
 

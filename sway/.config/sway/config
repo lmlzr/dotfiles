@@ -1,3 +1,12 @@
+# Autostart
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec mako
+
+
+
+# Steam Monitor
+set $gaming DP-1
+
 # Default config for sway
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.

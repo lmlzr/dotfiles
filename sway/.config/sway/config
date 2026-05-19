@@ -220,7 +220,7 @@ include /etc/sway/config.d/*
 bindsym Mod1+space exec fuzzel
 bindsym $mod+t exec kitty
 bindsym $mod+f exec firefox
-
+bindsym $mod+l exec swaylock
 
 input * {
     xkb_layout de

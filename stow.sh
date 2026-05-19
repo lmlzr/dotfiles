@@ -2,13 +2,24 @@
 
 #Desktop Environment
 echo "Stowing desktop environment"
+echso "stowing sway"
 stow sway
+echo "sway finished"
+echo "stowing swaylock"
 stow swaylock
+echo "swaylock finished"
+echo "stowing waybar"
 stow waybar
+echo "waybar finished"
+echo "Desktop environment finished"
 
+# Kanshi 
 read -p "Do you want to stow kanhsi? not recommended (y/n) " kanshi
 if [ "$kanshi" = "y" ]; then
     stow kanshi
+    echo "kanshi finished"
+else 
+    echo "kanshi skipped"
 fi
 
 #Launcher wahl
@@ -58,4 +69,4 @@ fi
 stow fastfetch
 stow bash
 stow yazi
-
+stow wallpaper

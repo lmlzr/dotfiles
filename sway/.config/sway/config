@@ -9,7 +9,7 @@ exec mako
 exec pipewire 
 exec pipewire-pulse 
 exec wireplumber 
-exec syncthing
+exec syncthing --no-browser
 
 
 

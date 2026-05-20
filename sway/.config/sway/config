@@ -1,10 +1,11 @@
 # Autostart
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec_always kanshi
 
 exec_always pkill waybar
 exec_always bash -c "sleep 1 && waybar"
+
 exec_always swaybg -i ~/wallpaper/wallpaper.png -m fill
-exec_always kanshi
 exec mako
 exec syncthing --no-browser
 
@@ -198,7 +199,7 @@ include /etc/sway/config.d/*
 
 # Custom Shortcuts:
 bindsym Mod1+space exec fuzzel
-bindsym $mod+t exec kitty
+bindsym $mod+t exec $term
 bindsym $mod+f exec firefox
 bindsym $mod+l exec swaylock
 

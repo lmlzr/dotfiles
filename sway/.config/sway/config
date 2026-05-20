@@ -198,7 +198,7 @@ include /etc/sway/config.d/*
 
 
 # Custom Shortcuts:
-bindsym Mod1+space exec fuzzel
+bindsym Mod1+space exec $menu
 bindsym $mod+t exec $term
 bindsym $mod+f exec firefox
 bindsym $mod+l exec swaylock

@@ -6,26 +6,20 @@ exec_always bash -c "sleep 1 && waybar"
 exec_always swaybg -i ~/wallpaper/wallpaper.png -m fill
 exec_always kanshi
 exec mako
-exec pipewire 
-exec pipewire-pulse 
-exec wireplumber 
 exec syncthing --no-browser
 
-
-
-# Steam Monitor
-set $gaming DP-1
-
+## Audio Autostart
+exec_always pkill
+exec_always pipewire 
+exec_always pkill
+exec_always pipewire-pulse 
+exec_always pkill
+exec_always wireplumber
 
 ### Variables
-#
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Home row direction keys, like vim
-set $left h
-set $down j
-set $up k
-set $right l
 # Your preferred terminal emulator
 set $term kitty
 # Your preferred application launcher
@@ -33,19 +27,11 @@ set $menu fuzzel
 
 include /etc/sway/config-vars.d/*
 
-
 ### Idle configuration
-#
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
+ exec swayidle -w \
+          timeout 1800 'swaylock -f -c 000000' \
+          timeout 2400 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+          before-sleep 'swaylock -f -c 000000'
 
 ### Input configuration
 #
@@ -65,14 +51,8 @@ include /etc/sway/config-vars.d/*
 #
 # Basics:
 #
-    # Start a terminal
-    bindsym $mod+Return exec $term
-
     # Kill focused window
     bindsym $mod+Shift+q kill
-
-    # Start your launcher
-    bindsym $mod+d exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.

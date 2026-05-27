@@ -1,15 +1,8 @@
 # Stow
-stow foldername
-example:
-stow kitty
+chmod +x stow.sh
+./stow.sh
 
-for everything do:
-first check:
-stow -n -v */
-do it:
-stow */
-to replace old links
-stow -R */
+
 
 
 # Kitty

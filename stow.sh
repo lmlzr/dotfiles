@@ -1,5 +1,3 @@
-
-
 #Desktop Environment
 echo "Stowing desktop environment"
 echso "stowing sway"
@@ -12,6 +10,9 @@ echo "stowing waybar"
 stow waybar
 echo "waybar finished"
 echo "Desktop environment finished"
+echo "Stowing mako"
+stow mako
+echo "mako finished"
 
 # Kanshi 
 read -p "Do you want to stow kanhsi? not recommended (y/n) " kanshi

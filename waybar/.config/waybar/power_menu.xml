@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <interface>
   <object class="GtkMenu" id="menu">
     <child>
@@ -13,11 +13,11 @@
 	</child>
     <child>
         <object class="GtkMenuItem" id="poweroff">
-			<property name="label">Shutdown</property>
+			<property name="label">Poweoff</property>
         </object>
     </child>
     <child>
-      <object class="GtkSeparatorMenuItem" id="delimiter1"/>
+      <object class="GtkSeparatorMenuItem" id="delimiter1" />
     </child>
     <child>
 		<object class="GtkMenuItem" id="reboot">

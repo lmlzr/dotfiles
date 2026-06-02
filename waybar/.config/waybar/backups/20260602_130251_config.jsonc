@@ -1,8 +1,8 @@
 [
     {
         "position": "top",
-        "height": 42,
-        "spacing": 10,
+        "height": 46,
+        "spacing": 12,
         "margin-top": 0,
         "margin-bottom": 0,
         "margin-left": 0,
@@ -42,7 +42,7 @@
             "anim-color-1": "#7aa2f7",
             "anim-color-2": "#bb9af7",
             "anim-duration": 3,
-            "button-radius": 5,
+            "button-radius": 12,
             "button-pad-v": 0,
             "button-pad-h": 4,
             "button-minw": 35
@@ -155,7 +155,7 @@
             "icon-size": 18
         },
         "custom/arch": {
-            "format": "<span font='JetBrainsMono Nerd Font Mono 20' color='#7aa2f7'>󱄅</span>",
+            "format": "<span font='JetBrainsMono Nerd Font Mono 22' color='#bb9af7'>󱄅</span>",
             "on-click": "$HOME/.local/bin/vsfetch",
             "tooltip": false,
             "arch-icon-glyph": "󱄅",

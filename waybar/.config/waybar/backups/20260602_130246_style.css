@@ -19,7 +19,7 @@
 }
 
 window#waybar {
-    background: alpha(@base, 1.00);
+    background: transparent;
     border-radius: 0px;
     border: none;
     color: @text;
@@ -29,14 +29,23 @@ window#waybar {
 .modules-center,
 .modules-right {
     background: transparent;
-    border-radius: 0;
-    padding: 2px 8px;
     border: none;
+    padding: 2px 6px;
     min-height: 0;
 }
 
+.modules-left > *,
+.modules-center > *,
+.modules-right > * {
+    background: alpha(@base, 1.00);
+    border-radius: 20px;
+    border: none;
+    padding: 0 12px;
+    margin: 0 2px;
+}
+
 .modules-right {
-    padding-right: 18px;
+    padding-right: 22px;
 }
 
 /* Arch icon */
@@ -51,7 +60,7 @@ window#waybar {
 }
 
 #workspaces button {
-    border-radius: 5px;
+    border-radius: 20px;
     padding: 0px 4px;
     min-width: 35px;
     background: transparent;
@@ -182,7 +191,7 @@ window#waybar #custom-updates, window#waybar #custom-weather, window#waybar #cus
 window#waybar #custom-power, window#waybar #custom-settings, window#waybar #custom-claudebar,
 window#waybar #custom-bar-cpu, window#waybar #custom-bar-mem,
 window#waybar #custom-bar-vol, window#waybar #custom-bar-wifi {
-    padding: 0 8px;
+    padding: 0 12px;
 }
 window#waybar #custom-arch {
     padding: 0 10px 0 15px;

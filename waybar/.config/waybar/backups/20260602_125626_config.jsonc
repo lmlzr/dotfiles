@@ -13,10 +13,12 @@
             "hyprland/window"
         ],
         "modules-center": [
+            "custom/weather",
             "clock"
         ],
         "modules-right": [
             "tray",
+            "custom/updates",
             "pulseaudio",
             "network",
             "memory",
@@ -39,8 +41,8 @@
                     5
                 ]
             },
-            "anim-color-1": "#7aa2f7",
-            "anim-color-2": "#bb9af7",
+            "anim-color-1": "#89b4fa",
+            "anim-color-2": "#cba6f7",
             "anim-duration": 3,
             "button-radius": 5,
             "button-pad-v": 0,
@@ -58,8 +60,7 @@
             "locale": "es_MX.utf8",
             "interval": 1,
             "on-click": "flatpak run com.ml4w.calendar",
-            "tooltip": true,
-            "_inverted": false
+            "tooltip": true
         },
         "cpu": {
             "format": "󰍛 {usage}%",
@@ -81,15 +82,6 @@
             "interval": 2,
             "_inverted": false
         },
-        "bluetooth": {
-            "format": "󰂯",
-            "format-disabled": "󰂲",
-            "format-connected": "󰂱 {device_alias}",
-            "on-click": "/usr/bin/blueman-manager",
-            "interval": 30,
-            "tooltip": true,
-            "_inverted": false
-        },
         "pulseaudio": {
             "format": "{icon} {volume}%",
             "format-muted": "󰝟 mute",
@@ -101,15 +93,7 @@
                 ]
             },
             "on-click": "pavucontrol",
-            "scroll-step": 5,
-            "_inverted": false
-        },
-        "wireplumber": {
-            "format": "<span font='JetBrainsMono Nerd Font Mono 12'>󰕾</span> {volume}%",
-            "format-muted": "<span font='JetBrainsMono Nerd Font Mono 12'>󰝟</span> mute",
-            "on-click": "pavucontrol",
-            "scroll-step": 5,
-            "_inverted": false
+            "scroll-step": 5
         },
         "battery": {
             "format": "{icon} {capacity}%",
@@ -126,8 +110,7 @@
             "states": {
                 "warning": 30,
                 "critical": 15
-            },
-            "_inverted": false
+            }
         },
         "backlight": {
             "format": "{icon} {percent}%",
@@ -143,25 +126,17 @@
             },
             "_inverted": false
         },
-        "mpris": {
-            "format": "{player_icon} {title}",
-            "format-paused": "{player_icon}  {title}",
-            "interval": 1,
-            "max-length": 40,
-            "_inverted": false
-        },
         "tray": {
             "spacing": 8,
             "icon-size": 18
         },
         "custom/arch": {
-            "format": "<span font='JetBrainsMono Nerd Font Mono 20' color='#7aa2f7'>󱄅</span>",
+            "format": "<span font='JetBrainsMono Nerd Font Mono 20' color='#ffffff'>󰣇</span>",
             "on-click": "$HOME/.local/bin/vsfetch",
             "tooltip": false,
-            "arch-icon-glyph": "󱄅",
+            "arch-icon-glyph": "󰣇",
             "arch-pad-left": 15,
-            "arch-pad-right": 10,
-            "_inverted": false
+            "arch-pad-right": 10
         },
         "custom/weather": {
             "format": "{}",
@@ -169,16 +144,14 @@
             "return-type": "json",
             "interval": 3600,
             "tooltip": true,
-            "on-click": "flatpak run io.github.amit9838.mousam",
-            "_inverted": false
+            "on-click": "flatpak run io.github.amit9838.mousam"
         },
         "custom/updates": {
             "exec": "count=$(checkupdates 2>/dev/null | wc -l); [ \"$count\" -gt 0 ] && echo '{\"text\":\"󰚰 '\"$count\"'\",\"class\":\"pending\"}' || echo '{\"text\":\"󰚰 0\",\"class\":\"updated\"}'",
             "return-type": "json",
             "interval": 60,
             "tooltip": false,
-            "on-click": "kitty --class floating-terminal -e ~/.config/hypr/scripts/install-updates.sh",
-            "_inverted": false
+            "on-click": "kitty --class floating-terminal -e ~/.config/hypr/scripts/install-updates.sh"
         },
         "custom/swaync": {
             "format": "<span font='JetBrainsMono Nerd Font Mono 16'>{icon}</span>",
@@ -194,20 +167,17 @@
             "on-click": "swaync-client -t -sw",
             "on-click-right": "swaync-client -d -sw",
             "escape": true,
-            "tooltip": false,
-            "_inverted": false
+            "tooltip": false
         },
         "custom/power": {
             "format": "⏻",
             "on-click": "wlogout -b 3 -c 20 -r 20 -L 400 -R 400 -T 200 -B 200 --protocol layer-shell",
-            "tooltip": false,
-            "_inverted": false
+            "tooltip": false
         },
         "custom/settings": {
             "format": "󰒓",
             "on-click": "vswaybar-studio",
-            "tooltip": false,
-            "_inverted": false
+            "tooltip": false
         },
         "custom/claudebar": {
             "exec": "claudebar --format '{session_bar} {session_pct}% · {session_reset}'",
@@ -221,32 +191,88 @@
             "exec": "$HOME/.config/waybar/scripts/vsbar.py --type cpu",
             "return-type": "json",
             "interval": 2,
-            "tooltip": true,
-            "_inverted": false
+            "tooltip": true
         },
         "custom/bar-mem": {
             "exec": "$HOME/.config/waybar/scripts/vsbar.py --type mem",
             "return-type": "json",
             "interval": 5,
-            "tooltip": true,
-            "_inverted": false
+            "tooltip": true
         },
         "custom/bar-vol": {
             "exec": "$HOME/.config/waybar/scripts/vsbar.py --type vol",
             "return-type": "json",
             "interval": 2,
             "tooltip": true,
-            "on-click": "pavucontrol",
-            "_inverted": false
+            "on-click": "pavucontrol"
         },
         "custom/bar-wifi": {
             "exec": "$HOME/.config/waybar/scripts/vsbar.py --type wifi",
             "return-type": "json",
             "interval": 5,
             "tooltip": true,
-            "on-click": "nm-connection-editor",
-            "_inverted": false
+            "on-click": "nm-connection-editor"
         },
         "name": "bar"
+    },
+    {
+        "name": "dock",
+        "position": "bottom",
+        "height": 54,
+        "spacing": 6,
+        "layer": "top",
+        "margin-top": 0,
+        "margin-bottom": 8,
+        "margin-left": 0,
+        "margin-right": 0,
+        "exclusive": true,
+        "passthrough": false,
+        "gtk-layer-shell": true,
+        "modules-left": [],
+        "modules-center": [
+            "custom/rofi",
+            "custom/firefox",
+            "custom/nautilus",
+            "custom/dolphin",
+            "custom/terminal",
+            "custom/vscode"
+        ],
+        "modules-right": [],
+        "custom/rofi": {
+            "format": "󱓟",
+            "tooltip": true,
+            "on-click": "rofi -show drun",
+            "tooltip-format": "App Launcher"
+        },
+        "custom/firefox": {
+            "format": "󰈹",
+            "tooltip": true,
+            "on-click": "firefox",
+            "tooltip-format": "Firefox"
+        },
+        "custom/nautilus": {
+            "format": "󰝰",
+            "tooltip": true,
+            "on-click": "nautilus",
+            "tooltip-format": "Files"
+        },
+        "custom/dolphin": {
+            "format": "󰝰",
+            "tooltip": true,
+            "on-click": "dolphin",
+            "tooltip-format": "Dolphin"
+        },
+        "custom/terminal": {
+            "format": "󰄛",
+            "tooltip": true,
+            "on-click": "kitty",
+            "tooltip-format": "Kitty"
+        },
+        "custom/vscode": {
+            "format": "󰨞",
+            "tooltip": true,
+            "on-click": "code",
+            "tooltip-format": "VS Code"
+        }
     }
 ]

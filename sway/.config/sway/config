@@ -2,7 +2,7 @@
 # exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec_always kanshi
 
-exec_always pkill waybar
+exec_always pkill waybar -c ~/.config/waybar/my_config.jsonc -s ~/.config/waybar/my_style.css
 exec_always bash -c "sleep 1 && waybar"
 
 exec_always swaybg -i ~/wallpaper/wallpaper.png -m fill

@@ -1,252 +1,158 @@
-[
-    {
-        "position": "top",
-        "height": 42,
-        "spacing": 10,
-        "margin-top": 0,
-        "margin-bottom": 0,
-        "margin-left": 0,
-        "margin-right": 0,
-        "modules-left": [
-            "custom/arch",
-            "hyprland/workspaces",
-            "hyprland/window"
-        ],
-        "modules-center": [
-            "clock"
-        ],
-        "modules-right": [
-            "tray",
-            "pulseaudio",
-            "network",
-            "memory",
-            "cpu",
-            "battery",
-            "custom/swaync",
-            "custom/settings",
-            "custom/power"
-        ],
-        "hyprland/workspaces": {
-            "format": "{id}",
-            "on-scroll-up": "hyprctl dispatch workspace e-1",
-            "on-scroll-down": "hyprctl dispatch workspace e+1",
-            "persistent-workspaces": {
-                "*": [
-                    1,
-                    2,
-                    3,
-                    4,
-                    5
-                ]
-            },
-            "anim-color-1": "#7aa2f7",
-            "anim-color-2": "#bb9af7",
-            "anim-duration": 3,
-            "button-radius": 5,
-            "button-pad-v": 0,
-            "button-pad-h": 4,
-            "button-minw": 35
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 30, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode",
+        "sway/scratchpad",
+        "custom/media"
+    ],
+    "modules-center": [
+        "sway/window"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "power-profiles-daemon",
+        "cpu",
+        "memory",
+        "backlight",
+        "sway/language",
+        "battery",
+        "battery#bat2",
+        "clock",
+        "tray",
+        "custom/power"
+    ],
+    // Modules configuration
+    // "sway/workspaces": {
+    //     "disable-scroll": true,
+    //     "all-outputs": true,
+    //     "warp-on-scroll": false,
+    //     "format": "{name}: {icon}",
+    //     "format-icons": {
+    //         "1": "",
+    //         "2": "",
+    //         "3": "",
+    //         "4": "",
+    //         "5": "",
+    //         "urgent": "",
+    //         "focused": "",
+    //         "default": ""
+    //     }
+    // },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
         },
-        "hyprland/window": {
-            "format": "{}",
-            "max-length": 60,
-            "separate-outputs": true
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "family": "ipv4",
+        "format-wifi": "({signalStrength}%)",
+        "format-disconnected": "Disconnected ⚠"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
         },
-        "clock": {
-            "format": "{:%H:%M  |  %A %d %B}",
-            "timezone": "America/Monterrey",
-            "locale": "es_MX.utf8",
-            "interval": 1,
-            "on-click": "flatpak run com.ml4w.calendar",
-            "tooltip": true,
-            "_inverted": false
+        "on-click": "pavucontrol"
+    },
+    "custom/media": {
+        "format": "{icon} {text}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
         },
-        "cpu": {
-            "format": "󰍛 {usage}%",
-            "tooltip": true,
-            "interval": 2
-        },
-        "memory": {
-            "format": "󰾆 {used:0.1f}G",
-            "tooltip-format": "RAM: {used:0.1f}G / {total:0.1f}G\nSwap: {swapUsed:0.1f}G / {swapTotal:0.1f}G",
-            "interval": 5,
-            "_inverted": false
-        },
-        "network": {
-            "format-wifi": "󰖩 {signalStrength}%",
-            "format-ethernet": "",
-            "format-disconnected": "",
-            "tooltip-format": "{ifname}: {ipaddr}/{cidr}\n{essid} ({signalStrength}%)\n↑ {bandwidthUpBits}  ↓ {bandwidthDownBits}",
-            "on-click": "nm-connection-editor",
-            "interval": 2,
-            "_inverted": false
-        },
-        "bluetooth": {
-            "format": "󰂯",
-            "format-disabled": "󰂲",
-            "format-connected": "󰂱 {device_alias}",
-            "on-click": "/usr/bin/blueman-manager",
-            "interval": 30,
-            "tooltip": true,
-            "_inverted": false
-        },
-        "pulseaudio": {
-            "format": "{icon} {volume}%",
-            "format-muted": "󰝟 mute",
-            "format-icons": {
-                "default": [
-                    "󰕿",
-                    "󰖀",
-                    "󰕾"
-                ]
-            },
-            "on-click": "pavucontrol",
-            "scroll-step": 5,
-            "_inverted": false
-        },
-        "wireplumber": {
-            "format": "<span font='JetBrainsMono Nerd Font Mono 12'>󰕾</span> {volume}%",
-            "format-muted": "<span font='JetBrainsMono Nerd Font Mono 12'>󰝟</span> mute",
-            "on-click": "pavucontrol",
-            "scroll-step": 5,
-            "_inverted": false
-        },
-        "battery": {
-            "format": "{icon} {capacity}%",
-            "format-icons": [
-                "󰁺",
-                "󰁼",
-                "󰁾",
-                "󰂀",
-                "󰂂",
-                "󰁹"
-            ],
-            "format-charging": "󰂄 {capacity}%",
-            "format-plugged": "󰚥 {capacity}%",
-            "states": {
-                "warning": 30,
-                "critical": 15
-            },
-            "_inverted": false
-        },
-        "backlight": {
-            "format": "{icon} {percent}%",
-            "on-scroll-up": "brightnessctl set 5%+",
-            "on-scroll-down": "brightnessctl set 5%-",
-            "_inverted": false
-        },
-        "idle_inhibitor": {
-            "format": "<span font='JetBrainsMono Nerd Font Mono 12'>{icon}</span>",
-            "format-icons": {
-                "activated": "󰾪",
-                "deactivated": "󰾩"
-            },
-            "_inverted": false
-        },
-        "mpris": {
-            "format": "{player_icon} {title}",
-            "format-paused": "{player_icon}  {title}",
-            "interval": 1,
-            "max-length": 40,
-            "_inverted": false
-        },
-        "tray": {
-            "spacing": 8,
-            "icon-size": 18
-        },
-        "custom/arch": {
-            "format": "<span font='JetBrainsMono Nerd Font Mono 20' color='#7aa2f7'>󱄅</span>",
-            "on-click": "$HOME/.local/bin/vsfetch",
-            "tooltip": false,
-            "arch-icon-glyph": "󱄅",
-            "arch-pad-left": 15,
-            "arch-pad-right": 10,
-            "_inverted": false
-        },
-        "custom/weather": {
-            "format": "{}",
-            "exec": "$HOME/.config/waybar/scripts/weather.py",
-            "return-type": "json",
-            "interval": 3600,
-            "tooltip": true,
-            "on-click": "flatpak run io.github.amit9838.mousam",
-            "_inverted": false
-        },
-        "custom/updates": {
-            "exec": "count=$(checkupdates 2>/dev/null | wc -l); [ \"$count\" -gt 0 ] && echo '{\"text\":\"󰚰 '\"$count\"'\",\"class\":\"pending\"}' || echo '{\"text\":\"󰚰 0\",\"class\":\"updated\"}'",
-            "return-type": "json",
-            "interval": 60,
-            "tooltip": false,
-            "on-click": "kitty --class floating-terminal -e ~/.config/hypr/scripts/install-updates.sh",
-            "_inverted": false
-        },
-        "custom/swaync": {
-            "format": "<span font='JetBrainsMono Nerd Font Mono 16'>{icon}</span>",
-            "format-icons": {
-                "none": "󰂚",
-                "notification": "󰂜",
-                "dnd-none": "󰂛",
-                "dnd-notification": "󰂛"
-            },
-            "return-type": "json",
-            "exec-if": "which swaync-client",
-            "exec": "swaync-client -swb",
-            "on-click": "swaync-client -t -sw",
-            "on-click-right": "swaync-client -d -sw",
-            "escape": true,
-            "tooltip": false,
-            "_inverted": false
-        },
-        "custom/power": {
-            "format": "⏻",
-            "on-click": "wlogout -b 3 -c 20 -r 20 -L 400 -R 400 -T 200 -B 200 --protocol layer-shell",
-            "tooltip": false,
-            "_inverted": false
-        },
-        "custom/settings": {
-            "format": "󰒓",
-            "on-click": "vswaybar-studio",
-            "tooltip": false,
-            "_inverted": false
-        },
-        "custom/claudebar": {
-            "exec": "claudebar --format '{session_bar} {session_pct}% · {session_reset}'",
-            "return-type": "json",
-            "interval": 30,
-            "signal": 13,
-            "tooltip": true,
-            "on-click": "xdg-open https://claude.ai/settings/usage"
-        },
-        "custom/bar-cpu": {
-            "exec": "$HOME/.config/waybar/scripts/vsbar.py --type cpu",
-            "return-type": "json",
-            "interval": 2,
-            "tooltip": true,
-            "_inverted": false
-        },
-        "custom/bar-mem": {
-            "exec": "$HOME/.config/waybar/scripts/vsbar.py --type mem",
-            "return-type": "json",
-            "interval": 5,
-            "tooltip": true,
-            "_inverted": false
-        },
-        "custom/bar-vol": {
-            "exec": "$HOME/.config/waybar/scripts/vsbar.py --type vol",
-            "return-type": "json",
-            "interval": 2,
-            "tooltip": true,
-            "on-click": "pavucontrol",
-            "_inverted": false
-        },
-        "custom/bar-wifi": {
-            "exec": "$HOME/.config/waybar/scripts/vsbar.py --type wifi",
-            "return-type": "json",
-            "interval": 5,
-            "tooltip": true,
-            "on-click": "nm-connection-editor",
-            "_inverted": false
-        },
-        "name": "bar"
+        "escape": true,
+        // "exec": "/usr/share/waybar/custom_modules/mediaplayer.py 2> /dev/null" // Script in resources folder
+        "exec": "~/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "custom/power": {
+        "format" : "⏻ ",
+		"tooltip": false,
+		"menu": "on-click",
+		"menu-file": "~/.config/waybar/power_menu.xml", // Menu file in resources folder
+		"menu-actions": {
+			"shutdown": "shutdown",
+			"reboot": "reboot",
+			"suspend": "systemctl suspend",
+			"hibernate": "systemctl hibernate"
+		}
     }
-]
+}

@@ -13,7 +13,7 @@
 	</child>
     <child>
         <object class="GtkMenuItem" id="poweroff">
-			<property name="label">Poweoff</property>
+			<property name="label">Poweroff</property>
         </object>
     </child>
     <child>

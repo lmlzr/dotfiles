@@ -9,13 +9,17 @@ exec_always swaybg -i ~/wallpaper/wallpaper.png -m fill
 exec mako
 exec syncthing --no-browser
 
-## Audio Autostart
-exec_always pkill
-exec_always pipewire 
-exec_always pkill
-exec_always pipewire-pulse 
-exec_always pkill
-exec_always wireplumber
+## Audio Autostart # TODO i need a working fix for this shit here
+#exec_always pkill pipewire
+#exec_always pipewire
+#exec_always pkill pipewire-pulse
+#exec_always pipewire-pulse
+#exec_always pkill wireplumber
+#exec_always wireplumber
+
+# Pin shit to workspaces
+assign [class="firefox"] 2
+assign [title="Spotify"] 7
 
 ### Variables
 # Logo key. Use Mod1 for Alt.
@@ -210,3 +214,28 @@ bindsym $mod+shift+s exec bash -c 'grim -g "$(slurp)" - | swappy -f -'
 input * {
     xkb_layout de
 }
+
+
+# Pin Workspaces to Monitors
+set $mon-primary DP-1
+set $mon-secondary HDMI-A-1
+set $mon-tri DP-2
+
+
+workspace 1 output $mon-primary
+workspace 3 output $mon-primary
+workspace 5 output $mon-primary
+workspace 6 output $mon-primary
+
+workspace 2 output $mon-secondary
+workspace 4 output $mon-secondary
+workspace 7 output $mon-secondary
+workspace 8 output $mon-secondary
+
+workspace 9 output $mon-tri
+workspace 10 output $mon-tri
+
+
+# Style
+titlebar_border_thickness 2
+default_border pixel 2

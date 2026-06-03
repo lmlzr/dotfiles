@@ -11,9 +11,7 @@ hl.config({
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
-        resize_on_border = false,
-
-        -- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
+        resize_on_border = true,
         allow_tearing = false,
 
         layout = "scrolling",
@@ -46,3 +44,7 @@ hl.config({
         enabled = true,
     },
 })
+
+-- Cursor 
+hl.env("XCURSOR_SIZE", "24")
+hl.env("HYPRCURSOR_SIZE", "24")

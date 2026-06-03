@@ -27,7 +27,6 @@ hl.gesture({
     action = "workspace"
 })
 
-
 require("configs/keybinds")
 require("configs/style")
 require("configs/plugins")

@@ -32,13 +32,19 @@ window#waybar {
 #tray{
     margin: 5px;
 }
+#wirepulmber{
+    margin: 5px;
+}
+#custom.separator{
+    margin: 5px;
+}
 /*tooltip*/
 tooltip {
     padding: 0;
     border: 1px solid @lavender;
     /*border: 2px solid transparent;*/
     border-radius: 7px;
-    background-color: alpha(@base, 0.7);
+    background-color: alpha(@base, 0.9);
     color: @subtext0;
 }
 tooltip * {

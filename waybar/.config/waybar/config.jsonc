@@ -8,6 +8,8 @@
         "clock"
     ],
     "modules-right":[
+        "wireplumber",
+        "custom/separator",
         "cpu",
         "custom/separator",
         "memory",
@@ -34,11 +36,11 @@
                     "weeks-pos"     : "right",
                     "on-scroll"     : 1,
                     "format": {
-                              "months":     "<span color='#ffead3'><b>{}</b></span>",
-                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              "months":     "<span color='#73dacb'><b>{}</b></span>",
+                              "days":       "<span color='#7dcfff'><b>{}</b></span>",
+                              "weeks":      "<span color='#b4f9f8'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#e0af68'><b>{}</b></span>",
+                              "today":      "<span color='#f7768e'><b><u>{}</u></b></span>"
                               }
                     },
         "actions":  {
@@ -60,7 +62,19 @@
     },
     "memory": {
         "interval": 30,
-        "format": "{}%/{total:0.1f}G "
+        "format-icons":"",
+        "format": "{}%|{total:0.1f}G {icon}",
+        "format-critical": "{}%|{total:0.1f}G <span color='#f7768e'>{icon}</span>",
+        "format-high": "{}%|{total:0.1f}G <span color='#bb9af7'>{icon}</span>",
+        "format-medium": "{}%|{total:0.1f}G <span color='#e0af68'>{icon}</span>",
+        "format-low": "{}%|{total:0.1f}G <span color='#9ece6a'>{icon}</span>",
+
+        "states": {
+            "low":0,
+            "medium": 50,
+            "high": 70,
+            "critical": 90
+        }
     },
     "bluetooth": {
         "format-off": "󰂲",
@@ -70,7 +84,16 @@
         "tooltip-format": "{controller_alias}\t{controller_address}",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-no-controller": "No Bluetooth controller",
         "on-click": "blueman-manager"
+    },
+    "wireplumber":{
+        "format":"{volume}% ",
+        "format-source":"{volume}% ",
+        "format-source-muted":"",
+        "format-muted":"󰝟",
+        "on-click":"pavucontrol -t 3",
+        "on-click-right":"qpwgraph"
     },
     "custom/separator": {
         "format": " / ",

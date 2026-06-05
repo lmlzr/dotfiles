@@ -8,18 +8,20 @@
         "clock"
     ],
     "modules-right":[
-
+        "cpu",
+        "custom/separator",
+        "memory",
+        "custom/separator",
+        "bluetooth",
+        "custom/separator",
+        "tray"
     ],
     "hyprland/workspaces":{
-        "format": "{name}",
+        "format": "{name}"
         //"format-icons": {
         //    "1": "󰈹", //firefox icon
         //    "2": ""
         //},
-        "persistent-workspaces": {
-             "DP-1": 2,
-             "HDMI-A-1": 1
-        }
     },
     "clock":{
         "interval": 1, // second time needed for work alternative 60 seconds 
@@ -44,5 +46,37 @@
                     "on-scroll-up": "shift_up",
                     "on-scroll-down": "shift_down"
                     }
+    },
+    "cpu": {
+        "interval": 5,
+        "format-icons":"",
+        "format": "{}% {icon}",
+        "format-critical":"{}% <span color='#f7768e'>{icon}</span>",
+        "max-length": 10,
+        "states": {
+            "critical": 90
+        },
+        "on-click": "kitty -e htop"
+    },
+    "memory": {
+        "interval": 30,
+        "format": "{}%/{total:0.1f}G "
+    },
+    "bluetooth": {
+        "format-off": "󰂲",
+        "format-on": "󰂯",
+        "format-connected": "󰂱 {num_connections}",
+        "format-no-controller":"󰂲",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "blueman-manager"
+    },
+    "custom/separator": {
+        "format": " / ",
+        "tooltip-format": ""
+    },
+        "tray": {
+        "spacing": 10
     }
 }

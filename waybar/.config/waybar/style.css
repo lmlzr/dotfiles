@@ -1,0 +1,50 @@
+@import "tokyo-night.css";
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    color: @text;
+}
+
+window#waybar {
+    background-color: @base;
+}
+
+
+
+
+/*modules*/
+#cpu{
+    margin: 5px;
+}
+#bluetooth{
+    margin: 5px;
+}
+#bluetooth.no-controller{
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    color: @red;
+}
+#memory{
+    margin: 5px;
+}
+/*tooltip*/
+tooltip {
+    padding: 0;
+    border: 1px solid @lavender;
+    /*border: 2px solid transparent;*/
+    border-radius: 7px;
+    background-color: alpha(@base, 0.7);
+    color: @subtext0;
+}
+tooltip * {
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: inherit;
+    background-color: transparent;
+}
+tooltip label {
+    padding: 1px;
+}

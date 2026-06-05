@@ -29,6 +29,9 @@ window#waybar {
 #memory{
     margin: 5px;
 }
+#tray{
+    margin: 5px;
+}
 /*tooltip*/
 tooltip {
     padding: 0;
@@ -44,7 +47,4 @@ tooltip * {
     border: none;
     border-radius: inherit;
     background-color: transparent;
-}
-tooltip label {
-    padding: 1px;
 }

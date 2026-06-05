@@ -13,6 +13,8 @@ profile VM {
 }
 
 profile Work {
-    output DP-1 enable mode 2560x1440@75.000Hz position 2560,0 
-    output HDMI-A-1 enable mode 2560x1440@75.000Hz position 0,0
+    output DP-1 enable mode 2560x1440@74.97Hz position 2560,0 
+    output HDMI-A-1 enable mode 2560x1440@74.97Hz position 0,0
+    output WAYLAND-1 disable
 }
+

@@ -39,26 +39,25 @@ window#waybar {
     margin: 5px;
 }
 #workspaces{
-    background-color: @overlay0;
+    background-color: @base;
 }
 #workspaces button {
     border-radius: 3px;
     padding: 0 0.5em;
     color: @mauve;
     margin: 0.25em;
-    background-color: @base;
 }
 #workspaces button.empty {
-    
+
 }
 #workspaces button.visible {
     
 }
 #workspaces button.active {
-    
+    background-color: @lavender;
 }
 #workspaces button.urgent {
-    
+   background-color: @red;
 }
 /*tooltip*/
 tooltip {

@@ -38,7 +38,6 @@ window#waybar {
 #custom.separator{
     margin: 5px;
 }
-
 #workspaces{
     background-color: @base;
 }

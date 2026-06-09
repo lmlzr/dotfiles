@@ -38,6 +38,7 @@ window#waybar {
 #custom.separator{
     margin: 5px;
 }
+
 #workspaces{
     background-color: @base;
 }
@@ -51,7 +52,7 @@ window#waybar {
 
 }
 #workspaces button.visible {
-    
+
 }
 #workspaces button.active {
     background-color: @lavender;

@@ -239,3 +239,6 @@ workspace 10 output $mon-tri
 # Style
 titlebar_border_thickness 2
 default_border pixel 2
+
+include ~/.config/sway/noctalia
+

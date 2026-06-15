@@ -110,7 +110,13 @@
                     "useDistroLogo": true
                 },
                 {
-                    "id": "Clock"
+                    "clockColor": "tertiary",
+                    "customFont": "Sans Serif",
+                    "formatHorizontal": "HH:mm:ss ddd, MMM dd",
+                    "formatVertical": "HH mm - dd MM",
+                    "id": "Clock",
+                    "tooltipFormat": "HH:mm ddd, MMM dd",
+                    "useCustomFont": false
                 },
                 {
                     "compactMode": true,

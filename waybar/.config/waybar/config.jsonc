@@ -10,10 +10,10 @@
     "modules-right":[
         "wireplumber",
         "custom/separator",
-        "cpu",
-        "custom/separator",
-        "memory",
-        "custom/separator",
+        //"cpu",
+        //"custom/separator",
+        //"memory",
+        //"custom/separator",
         "bluetooth",
         "custom/separator",
         "tray"

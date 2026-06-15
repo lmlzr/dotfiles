@@ -1,7 +1,10 @@
 -- Autostart
 hl.on("hyprland.start", function () 
-  hl.exec_cmd("waybar & kanshi & swaync")
+  hl.exec_cmd("kanshi & swaync")
   hl.exec_cmd("swaybg -i ~/wallpaper/wallpaper.png -m fill")
+  hl.exec_cmd("waybar ") -- starting with waybar
+  --hl.exec_cmd("qs -c noctalia-shell") -- starting with noctalia-shell
+  --hl.exec_cmd("quickshell") -- starting with quickshell
   -- hl.exec_cmd("waybar & hyprpaper & firefox") -- Execute waybar, hyprpaper, firefox
 end)
 

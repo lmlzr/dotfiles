@@ -157,6 +157,9 @@
                 },
                 {
                     "id": "plugin:syncthing-status"
+                },
+                {
+                    "id": "plugin:wallcards"
                 }
             ]
         }
@@ -193,7 +196,7 @@
         "predefinedScheme": "Tokyo Night",
         "schedulingMode": "off",
         "syncGsettings": true,
-        "useWallpaperColors": false
+        "useWallpaperColors": true
     },
     "controlCenter": {
         "cards": [
@@ -632,7 +635,7 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/lme/Pictures/Wallpapers",
+        "directory": "/home/lme/wallpaper",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [

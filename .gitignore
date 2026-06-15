@@ -1,1 +1,6 @@
 /noctalia/.config/noctalia/plugins
+/fuzzel/.config/fuzzel/themes/noctalia
+/yazi/.config/yazi/flavors/noctalia.yazi/flavor.toml
+/sway/.config/sway/noctalia
+/niri/.config/niri/noctalia.kdl
+/hypr/.config/hypr/noctalia/noctalia-colors.conf

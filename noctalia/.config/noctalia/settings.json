@@ -102,7 +102,12 @@
             ],
             "left": [
                 {
-                    "id": "Launcher"
+                    "colorizeSystemIcon": "tertiary",
+                    "customIconPath": "",
+                    "enableColorization": true,
+                    "icon": "rocket",
+                    "id": "Launcher",
+                    "useDistroLogo": true
                 },
                 {
                     "id": "Clock"
@@ -114,7 +119,7 @@
                     "id": "SystemMonitor",
                     "showCpuCores": false,
                     "showCpuFreq": false,
-                    "showCpuTemp": true,
+                    "showCpuTemp": false,
                     "showCpuUsage": true,
                     "showDiskAvailable": false,
                     "showDiskUsage": false,
@@ -122,7 +127,7 @@
                     "showGpuTemp": false,
                     "showLoadAverage": false,
                     "showMemoryAsPercent": false,
-                    "showMemoryUsage": true,
+                    "showMemoryUsage": false,
                     "showNetworkStats": false,
                     "showSwapUsage": false,
                     "textColor": "none",
@@ -130,7 +135,19 @@
                     "usePadding": false
                 },
                 {
-                    "id": "MediaMini"
+                    "compactMode": false,
+                    "hideMode": "hidden",
+                    "id": "MediaMini",
+                    "maxWidth": 145,
+                    "panelShowAlbumArt": true,
+                    "scrollingMode": "hover",
+                    "showAlbumArt": true,
+                    "showArtistFirst": true,
+                    "showProgressRing": true,
+                    "showVisualizer": false,
+                    "textColor": "none",
+                    "useFixedWidth": false,
+                    "visualizerType": "linear"
                 }
             ],
             "right": [
@@ -151,9 +168,6 @@
                 },
                 {
                     "id": "Volume"
-                },
-                {
-                    "id": "plugin:hassio"
                 },
                 {
                     "id": "plugin:syncthing-status"
@@ -263,6 +277,11 @@
         "gridSnap": false,
         "gridSnapScale": false,
         "monitorWidgets": [
+            {
+                "name": "HDMI-A-1",
+                "widgets": [
+                ]
+            }
         ],
         "overviewEnabled": true
     },
@@ -620,7 +639,7 @@
         "enableUserTheming": true
     },
     "ui": {
-        "boxBorderEnabled": false,
+        "boxBorderEnabled": true,
         "fontDefault": "Noto Sans",
         "fontDefaultScale": 1,
         "fontFixed": "monospace",

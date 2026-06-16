@@ -1,11 +1,11 @@
-/noctalia/.config/noctalia/plugins
+noctalia/.config/noctalia/plugins
 
-/fuzzel/.config/fuzzel/themes/noctalia
-/hypr/.config/hypr/hyprtoolkit.conf
-/hypr/.config/hypr/noctalia/noctalia-colors.conf
-/hypr/.config/hypr/noctalia/noctalia-colors.conf
-/niri/.config/niri/noctalia.kdl
-/noctalia/.config/noctalia/colors.json
-/sway/.config/sway/noctalia
-/yazi/.config/yazi/flavors/noctalia.yazi/flavor.toml
+fuzzel/.config/fuzzel/themes/noctalia
+hypr/.config/hypr/hyprtoolkit.conf
+hypr/.config/hypr/noctalia/noctalia-colors.conf
+hypr/.config/hypr/noctalia/noctalia-colors.conf
+niri/.config/niri/noctalia.kdl
+noctalia/.config/noctalia/colors.json
+sway/.config/sway/noctalia
+yazi/.config/yazi/flavors/noctalia.yazi/flavor.toml
 ghostty/.config/ghostty/themes/noctalia

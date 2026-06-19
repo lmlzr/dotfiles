@@ -15,3 +15,6 @@
 #input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/noctalia.json"
 #output_path = "/home/lme/.cache/noctalia/placeholder.json"
 
+[templates.element]
+input_path = "~/.config/noctalia/templates/element-theme.json"
+output_path = "~/.config/Element/config.json"

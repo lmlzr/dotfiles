@@ -2,7 +2,7 @@ fastfetch
 # Aliases
 alias rebuild='sudo NIXOS_NO_CHECK=1 nixos-rebuild switch --flake ~/nixos-flakes --impure'
 alias update='sudo nix flake update --flake ~/nixos-flakes'
-alias cat='bat'
+alias cat='batcat'
 alias ll='ls -la'
 alias proto='ssh lmlzr@192.168.178.94'
 alias vps='ssh -i ~/.ssh/vps lmlzr@217.154.218.53'

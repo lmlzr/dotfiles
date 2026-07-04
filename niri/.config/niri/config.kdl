@@ -3,6 +3,8 @@
 spawn-sh-at-startup "kanshi"
 spawn-sh-at-startup "syncthing --no-browser"
 spawn-sh-at-startup "qs -c noctalia-shell" // autostart noctalia
+spawn-sh-at-startup "noctalia-shell" // autostart noctalia in nixos
+spawn-at-startup "keepasXC" // autostart noctalia in nixos
 // https://niri-wm.github.io/niri/Configuration:-Introduction
 
 // Input device configuration.
@@ -33,7 +35,7 @@ input {
     mouse {
         // off
         // natural-scroll
-        accel-speed 0.2
+        accel-speed 0.6
         accel-profile "flat"
         // scroll-method "no-scroll"
     }
